@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Divyank Goyal | Resume</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+@font-face {
+  font-family: "Myfont";                 
+  src:url("Myfont.ttf") format("truetype");   
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #F2F2F2;   
+  --card: #FFFFFF;        
+  --text: #174D38;        
+  --soft-text: #4F6B5E;    
+  --accent: #4D1717;      
+  --on-accent: #F2F2F2;    
+  --line: #CBCBCB;        
+}
+
+
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Myfont", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0 0 10px 0;
+    }
+    h2 { font-size: 34px; margin-bottom: 25px; }
+    h3 { font-size: 20px; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 50px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .soft { color: var(--soft-text); }
+
+    .menu {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .menu a {
+      color: var(--soft-text);
+      text-decoration: none;
+      margin-right: 18px;
+      display: inline-block;
+    }
+    .menu a:hover { color: var(--accent); }
+    .menu .name {
+      color: var(--text);
+      font-weight: 600;
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+
+    .hero { padding: 70px 0 50px 0; }
+    .hello {
+      font-size: 90px;          
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0;
+      line-height: 1.1;
+    }
+    .hero h1 { font-size: 48px; }
+    .role { font-size: 22px; color: var(--soft-text); }
+
+    .button {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 2px solid var(--text);
+      border-radius: 30px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 10px 10px 0 0;
+    }
+    .button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--on-accent);
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .column {
+      flex: 1 1 300px;  
+    }
+
+    .info-box {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 15px 20px;
+    }
+
+    /* ---------- Education and achievements ---------- */
+    .entry {
+      border-left: 3px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+    .entry .year { font-size: 15px; color: var(--soft-text); }
+    .entry p { margin: 5px 0 0 0; }
+
+    .row {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .row .hindi-word {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .skill-name {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .placeholder {
+      background: var(--card);
+      border: 2px dashed var(--line);
+      color: var(--soft-text);
+      text-align: center;
+      padding: 40px 15px;
+      border-radius: 8px;
+    }
+    .video-box { height: 220px; }     
+    .certificate-box { height: 140px; }
+
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .certificate { flex: 1 1 200px; }
+
+  .instagram {
+    align-self: flex-start;  
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 40px 0;
+    }
+
+.video-area video {
+  display: block;
+  width: 100%;
+  max-width: 320px;    
+  max-height: 560px;   
+  border-radius: 8px;
+  background: black;
+}
+
+.certificate-box {
+  padding: 0;          
+  height: auto;        
+  overflow: hidden;    
+}
+
+.certificate-box img {
+  display: block;    
+  width: 100%;     
+  height: auto;        
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="menu">
+    <div class="container">
+      <a class="name" href="#top">Divyank Goyal</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </div>
+
+  <div class="hero" id="top">
+    <div class="container">
+      <p class="hello" lang="hi">नमस्ते</p>
+      <h1>Divyank Goyal</h1>
+      <p class="role">Student, public speaker, debater and editor.</p>
+      <p>I'm a passionate learner with a flair for public speaking and a love for debate and editing.</p>
+      <a class="button main" href="#projects">See my projects</a>
+      <a class="button" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2>About me</h2>
+      <div class="columns">
+        <div class="column">
+          <p>I love telling stories and getting people to listen. Whether it’s a campaign, a debate round or a video edit, I enjoy shaping ideas until they land clearly.</p>
+          <p>I'm passionate to achieve excellence in the subject that I study besides that I feel deeply rooted to the culture I am born in and I a utmost grateful to it and dream to take it on the global stage.</p>
+        </div>
+        <div class="column info-box">
+          <p><strong>Based in:</strong><br>Patiala, India</p>
+          <p><strong>Languages:</strong><br>Hindi, English</p>
+          <p><strong>Email:</strong><br>divyank8384@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="container">
+      <h2>Education and achievements</h2>
+      <div class="columns">
+
+        <div class="column">
+          <h3>Education</h3>
+          <br>
+          <div class="entry">
+            <div class="year">2026 to 2029</div>
+            <h3>Bachelor of Science in Biotechnology, Bachelor in Business Administration DBE</h3>
+            <p class="soft">Thapar School Of Liberal Arts and Sciences, IIM Bangelore .</p>
+          </div>
+          <div class="entry">
+            <div class="year">2023-2025</div>
+            <h3>Class 10th-12th</h3>
+            <p class="soft">Nosegay Public School.</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <h3>Achievements</h3>
+          <br>
+          <div class="entry">
+            <div class="year">2025</div>
+            <h3>NEET 2025</h3>
+            <p class="soft">98.24%ile and AIR 37916.</p>
+          </div>
+          <div class="entry">
+            <div class="year">2025</div>
+            <h3>CUET 2025</h3>
+            <p class="soft">100%ile in Biology,
+              99.78%ile in Chemistry,
+              99.39%ile in Physics.</p>
+          </div>
+          <div class="entry">
+            <div class="year">2023</div>
+            <h3>Class 10th Board Results</h3>
+            <p class="soft">93.33% in CBSE Class 10</p>
+          </div>
+          <div class="entry">
+            <div class="year">2025</div>
+            <h3>Class 12th Board Results</h3>
+            <p class="soft">97% in CBSE Class 12</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hobbies">
+    <div class="container">
+      <h2>Hobbies</h2>
+
+      <div class="row">
+        <div class="hindi-word" lang="hi">किताबें</div>
+        <h3>Reading books</h3>
+        <p class="soft">Favourite Book: 'The day I stopped drinking milk' by Sudha Murthy.</p>
+      </div>
+
+      <div class="row">
+        <div class="hindi-word" lang="hi">फ़िल्में</div>
+        <h3>Watching movies</h3>
+        <p class="soft">Favourite Movie: 'English Vinglish' by Gauri Shinde.</p>
+      </div>
+
+      <div class="row">
+        <div class="hindi-word" lang="hi">हिंदी कविता</div>
+        <h3>Listening to Hindi poetry</h3>
+        <p class="soft">Favourite Poet: Rashmirathi by Ramdhari Singh Dinkar</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="columns">
+
+        <div class="column">
+             <div class="video-area"><video controls><source src="Video1.mp4" type="video/mp4"></video></div>
+        </div>
+          <div class="column">
+
+  <div class="project">
+    <h3>CineWalk, Thapar Movie Club</h3>
+    <p class="soft">Worked on a project at CineWalk, organised by the Thapar Movie Club in Adalat Bazaar, Patiala.</p>
+  </div>
+
+  <div class="project">
+    <h3>Social media for my family business</h3>
+    <p class="soft">Worked on the social media handle of my family business, creating and sharing content to build its online presence.</p>
+  </div>
+
+  <a class="instagram" href="https://www.instagram.com/kbsherbal_india/" target="_blank">Instagram: @kbsherbal_india</a>
+
+   </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="certificates">
+    <div class="container">
+      <h2>Certificates</h2>
+      <div class="certificates">
+
+        <div class="certificate">
+          <div class="placeholder certificate-box"><img src="WhatsApp Image 2026-11-04 at 09.56.49.jpeg" alt="Certificate name" width="100%"></div>
+          <h3>AI Hackathon</h3>
+          <p class="soft">First prize in the AI Hackathon at IIT Jodhpur, 2026</p>
+        </div>
+
+        <div class="certificate">
+          <div class="placeholder certificate-box"><img src="WhatsApp Image 2026-11-04 at 09.57.13.jpeg" alt="Certificate name" width="100%"></div>
+          <h3>Ayurmahotsav 2025</h3>
+          <p class="soft">Participation in the Ayurmahotsav event, 2025</p>
+        </div>
+
+        <div class="certificate">
+          <div class="placeholder certificate-box"><img src="WhatsApp Image 2026-11-04 at 09.58.24.jpeg" alt="Certificate name" width="100%"></div>
+          <h3>Savanna MUN</h3>
+          <p class="soft">Participation in the Savanna MUN event, 2025</p>
+        </div>
+
+        <div class="certificate">
+          <div class="placeholder certificate-box"><img src="WhatsApp Image 2026-11-04 at 09.59.28.jpeg" alt="Certificate name" width="100%"></div>
+          <h3>Google Freshers'Party Champion</h3>
+          <p class="soft">Second Price in the Google Freshers'Party competition, 2026</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <div class="row">
+        <div class="skill-name">Marketing</div>
+        <span class="soft">I have always been intrusive in marketing as my domain worked in social media marketing of my family business as well as currently working in marketing department of Thapar Movie Club.</span>
+      </div>
+      <div class="row">
+        <div class="skill-name">Public speaking</div>
+        <span class="soft">I have always loved the stage and I have always seen public speaking as the most powerful tool to transform lives and raise awareness hence I developed it with my teacher's guidance in it by enhancing my vocabulary and confidence through workshops.</span>
+      </div>
+      <div class="row">
+        <div class="skill-name">Debating</div>
+        <span class="soft">I am a thorough believer that ideas shape our existence and debating is my way of feeling alive by making my contribution to the world. I love to change the mindset of people who think debating as fighting rather I feel its a method to enrich our brains with something new every time.</span>
+      </div>
+      <div class="row">
+        <div class="skill-name">Editing</div>
+        <span class="soft">This skill is very new in my life but it has made me very excited because this skill can be my foremost strength as a digital marketer.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer" id="contact">
+    <div class="container">
+      <p><strong>Let’s talk.</strong> <a href="mailto:you@example.com">divyank8384@gmail.com</a></p>
+      <p class="soft">© 2026 Divyank Goyal</p>
+    </div>
+  </div>
+
+</body>
+</html>

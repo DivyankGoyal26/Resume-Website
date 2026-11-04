@@ -1,0 +1,21 @@
+.instagram {
+  align-self: flex-start;   /* stops the button stretching to the video's height */
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.video-area video {
+  display: block;
+  width: 100%;
+  max-width: 320px;     /* limits how wide the video can get */
+  max-height: 560px;    /* limits how tall it can get */
+  border-radius: 8px;
+  background: black;
+}
