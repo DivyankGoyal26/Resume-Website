@@ -8,193 +8,428 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Hind:wght@400;600&display=swap");
+
+:root {
+  --navy: #061A3F;         
+  --navy-soft: #081C42;     
+  --blue: #1F6FD6;         
+  --sky: #7CC4FF;          
+  --bg: #F3F7FD;         
+  --card: #FFFFFF;    
+  --text: #0B1B3F;         
+  --soft-text: #5F6F8C;     
+  --line: #E1E8F4;         
+  --shadow: 0 10px 30px rgba(11, 27, 63, 0.08);
+}
+
 @font-face {
-  font-family: "Myfont";                 
-  src:url("Myfont.ttf") format("truetype");   
+  font-family: "MyFont";
+  src: url("Myfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-:root {
-  --background: #F2F2F2;   
-  --card: #FFFFFF;        
-  --text: #174D38;        
-  --soft-text: #4F6B5E;    
-  --accent: #4D1717;      
-  --on-accent: #F2F2F2;    
-  --line: #CBCBCB;        
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Myfont", "Plus Jakarta Sans", "Hind", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
 }
 
+h1, h2, h3 {
+  font-family: "Myfont","Plus Jakarta Sans", "Hind", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;  
+  line-height: 1.1;
+  margin: 0 0 12px 0;
+}
+h2 { font-size: 40px; margin-bottom: 30px; }
+h3 { font-size: 20px; letter-spacing: -0.01em; }
 
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.soft { color: var(--soft-text); }
 
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: "Myfont", Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  padding: 16px 0;
+}
+.menu a {
+  color: #BFD9FF;
+  text-decoration: none;
+  margin-right: 22px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+}
+.menu a:hover { color: #FFFFFF; }
+.menu .name {
+  color: #FFFFFF;
+  font-family: "Myfont","Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
 
-    h1, h2, h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      margin: 0 0 10px 0;
-    }
-    h2 { font-size: 34px; margin-bottom: 25px; }
-    h3 { font-size: 20px; }
+.hero {
+  background: radial-gradient(circle at 75% 65%, #1D63C4 0%, #0A2F6B 40%, var(--navy) 80%);
+  color: #D3E4FF;
+  padding: 90px 0 80px 0;
+}
+.hello {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--sky);
+  margin: 0;
+  line-height: 1.2;
+}
+.hero h1 {
+  font-size: 64px;
+  text-transform: uppercase;    /* DIVYANK GOYAL */
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #FFFFFF;
+  margin: 10px 0 20px 0;
+}
+.role {
+  font-size: 22px;
+  color: var(--sky);
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 14px 12px 0 0;
+}
+.button:hover { border-color: #FFFFFF; }
+.button.main {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #0B3A7E;
+}
 
-    .section {
-      padding: 50px 0;
-      border-top: 1px solid var(--line);
-    }
+.hero-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.hero-text { flex: 1 1 400px; }
+.hero-photo { flex: 0 1 320px; }
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
 
-    .soft { color: var(--soft-text); }
+.section { padding: 80px 0; }
+#hobbies, #certificates { background: #FFFFFF; }   
 
-    .menu {
-      padding: 15px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .menu a {
-      color: var(--soft-text);
-      text-decoration: none;
-      margin-right: 18px;
-      display: inline-block;
-    }
-    .menu a:hover { color: var(--accent); }
-    .menu .name {
-      color: var(--text);
-      font-weight: 600;
-      font-family: Georgia, serif;
-      font-size: 20px;
-    }
+.columns { display: flex; flex-wrap: wrap; gap: 30px; }
+.column { flex: 1 1 300px; }
 
-    .hero { padding: 70px 0 50px 0; }
-    .hello {
-      font-size: 90px;          
-      font-weight: 600;
-      color: var(--accent);
-      margin: 0;
-      line-height: 1.1;
-    }
-    .hero h1 { font-size: 48px; }
-    .role { font-size: 22px; color: var(--soft-text); }
+.info-box {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+}
 
-    .button {
-      display: inline-block;
-      padding: 10px 22px;
-      border: 2px solid var(--text);
-      border-radius: 30px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      margin: 10px 10px 0 0;
-    }
-    .button:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: var(--on-accent);
-    }
+.entry {
+  border-left: 3px solid var(--blue);
+  padding-left: 18px;
+  margin-bottom: 28px;
+}
+.entry .year {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.entry p { margin: 6px 0 0 0; }
 
-    .columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .column {
-      flex: 1 1 300px;  
-    }
+.row {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px 28px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.row .hindi-word {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue);
+}
 
-    .info-box {
-      background: var(--card);
-      border-left: 4px solid var(--accent);
-      padding: 15px 20px;
-    }
-
-    /* ---------- Education and achievements ---------- */
-    .entry {
-      border-left: 3px solid var(--accent);
-      padding-left: 15px;
-      margin-bottom: 25px;
-    }
-    .entry .year { font-size: 15px; color: var(--soft-text); }
-    .entry p { margin: 5px 0 0 0; }
-
-    .row {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .row .hindi-word {
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--accent);
-    }
-    .skill-name {
-      font-family: Georgia, serif;
-      font-size: 30px;
-      font-weight: bold;
-    }
-
-    .placeholder {
-      background: var(--card);
-      border: 2px dashed var(--line);
-      color: var(--soft-text);
-      text-align: center;
-      padding: 40px 15px;
-      border-radius: 8px;
-    }
-    .video-box { height: 220px; }     
-    .certificate-box { height: 140px; }
-
-    .certificates {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .certificate { flex: 1 1 200px; }
-
-  .instagram {
-    align-self: flex-start;  
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-    .footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0 40px 0;
-    }
-
+.project {
+  border-left: 3px solid var(--blue);
+  padding-left: 16px;
+  margin-bottom: 26px;
+}
 .video-area video {
   display: block;
   width: 100%;
-  max-width: 320px;    
-  max-height: 560px;   
-  border-radius: 8px;
+  max-width: 320px;
+  max-height: 560px;
+  border-radius: 20px;
   background: black;
+  box-shadow: var(--shadow);
+}
+.instagram {
+  align-self: flex-start;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: var(--blue);
+  color: #FFFFFF;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.instagram:hover { background: #1558AD; }
+
+.certificates { display: flex; flex-wrap: wrap; gap: 20px; }
+.certificate {
+  flex: 1 1 200px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 12px 12px 16px 12px;
+  box-shadow: var(--shadow);
+}
+.certificate h3, .certificate p { margin-left: 6px; margin-right: 6px; }
+.placeholder {
+  background: #EAF1FC;
+  border: 2px dashed #B9CDEB;
+  color: var(--soft-text);
+  text-align: center;
+  padding: 40px 15px;
+  border-radius: 14px;
+}
+.certificate-box { padding: 0; height: auto; overflow: hidden; }
+.certificate-box img { display: block; width: 100%; height: auto; }
+
+#skills {
+  background: var(--navy-soft);
+  color: #FFFFFF;
+}
+#skills .container { display: flex; flex-wrap: wrap; gap: 16px; }
+#skills h2 { flex-basis: 100%; color: #FFFFFF; }
+#skills .row {
+  flex: 1 1 240px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(124, 196, 255, 0.35);
+  box-shadow: none;
+  border-radius: 20px;
+}
+#skills .skill-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+#skills .skill-name::before { content: "✦ "; color: var(--sky); }   
+#skills .soft { color: #A9BEE0; }
+
+.footer {
+  background: var(--navy);
+  color: #D3E4FF;
+  padding: 40px 0;
+}
+.footer a { color: var(--sky); }
+.footer .soft { color: #8FA8D3; }
+
+
+.eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.hero .eyebrow, #skills .eyebrow { color: var(--sky); }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  padding: 24px 28px;
+  color: #FFFFFF;
+  backdrop-filter: blur(10px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.certificate-box {
-  padding: 0;          
-  height: auto;        
-  overflow: hidden;    
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.button,
+.instagram,
+.to-top,
+.menu a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.certificate-box img {
-  display: block;    
-  width: 100%;     
-  height: auto;        
+.button.main:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(124, 196, 255, 0.45);
+  background: #E6F2FF;
+}
+
+.button:not(.main):hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.instagram:hover {
+  transform: translateY(-4px);
+  background: #1558AD;
+  box-shadow: 0 12px 28px rgba(31, 111, 214, 0.4);
+}
+
+.to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.menu a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-decoration-color: var(--sky);
+  text-underline-offset: 6px;
+}
+
+.button:active,
+.instagram:active {
+  transform: translateY(-1px);
+}
+
+.ticket-section {
+  background: linear-gradient(180deg, #0A2F6B 0%, #061A3F 100%);
+  padding: 60px 0 70px 0;
+  border-bottom: 3px dashed rgba(124, 196, 255, 0.5);
+}
+
+.ticket {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 28px 30px;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 26px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.ticket:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.ticket-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 20px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #BFD9FF;
+}
+
+.ticket-row.top {
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ticket-row.bottom {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ticket-route {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 0;
+}
+
+.place .code {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.place .label {
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #BFD9FF;
+}
+
+.place.end {
+  text-align: right;
+}
+
+.plane {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sky);
+  font-size: 30px;
+}
+
+.plane::before,
+.plane::after {
+  content: "";
+  flex: 1;
+  border-top: 2px dashed rgba(255, 255, 255, 0.4);
 }
   </style>
 </head>
@@ -223,6 +458,37 @@
       <a class="button" href="#contact">Get in touch</a>
     </div>
   </div>
+  <div class="ticket-section">
+  <div class="container">
+    <div class="ticket">
+
+      <div class="ticket-row top">
+        <span>Personal Flight Plan</span>
+        <span>DG / 01</span>
+      </div>
+
+      <div class="ticket-route">
+        <div class="place">
+          <div class="code">IND</div>
+          <div class="label">Roots &amp; Culture</div>
+        </div>
+
+        <div class="plane">&#9992;&#xFE0E;</div>
+
+        <div class="place end">
+          <div class="code">WLD</div>
+          <div class="label">Global Stage</div>
+        </div>
+      </div>
+
+      <div class="ticket-row bottom">
+        <span>Destination: Excellence</span>
+        <span>Status: In progress</span>
+      </div>
+
+    </div>
+  </div>
+</div>
 
   <section class="section" id="about">
     <div class="container">
@@ -369,7 +635,7 @@
         <div class="certificate">
           <div class="placeholder certificate-box"><img src="WhatsApp Image 2026-11-04 at 09.59.28.jpeg" alt="Certificate name" width="100%"></div>
           <h3>Google Freshers'Party Champion</h3>
-          <p class="soft">First Prize in the Google Freshers'Party competition, 2026</p>
+          <p class="soft">Second Price in the Google Freshers'Party competition, 2026</p>
         </div>
 
       </div>
